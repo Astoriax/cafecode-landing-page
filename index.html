@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>کافه‌کُد | CafeCode - فضای کار اشتراکی تخصصی توسعه‌دهندگان</title>
+    <!-- Vazirmatn & JetBrains Mono Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Vazirmatn:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            bg: '#121212',
+                            surface: '#1E1E24',
+                            surfaceElevated: '#282830',
+                            border: '#33333F',
+                            primaryText: '#F4F4F5',
+                            mutedText: '#A1A1AA',
+                            neon: '#00FF66',
+                            neonHover: '#00CC52',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Vazirmatn', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #121212;
+            color: #F4F4F5;
+            font-family: 'Vazirmatn', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        .neon-btn {
+            background-color: #00FF66;
+            color: #121212;
+            font-weight: 700;
+            box-shadow: 0 0 15px rgba(0, 255, 102, 0.25);
+            transition: all 0.2s ease-in-out;
+        }
+        .neon-btn:hover {
+            background-color: #00CC52;
+            box-shadow: 0 0 25px rgba(0, 255, 102, 0.45);
+            transform: translateY(-2px);
+        }
+        .glass-card {
+            background: rgba(30, 30, 36, 0.75);
+            backdrop-filter: blur(12px);
+            border: 1px solid #33333F;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-brand-neon selection:text-brand-bg">
+
+    <!-- NAVIGATION BAR -->
+    <header id="Header_Navbar" class="sticky top-0 z-50 bg-[#121212]/90 backdrop-blur-md border-b border-brand-border h-[80px] flex items-center">
+        <div class="max-w-[1200px] w-full mx-auto px-4 flex items-center justify-between">
+            <a href="#" id="Header_Logo" class="flex items-center gap-2 text-xl font-black text-brand-primaryText tracking-tight">
+                <span class="font-mono text-brand-neon text-2xl">&gt;_</span>
+                <span>کافه‌کُد</span>
+                <span class="text-xs text-brand-mutedText font-mono font-normal">| CafeCode</span>
+            </a>
+
+            <nav id="Header_Nav_Links" class="hidden md:flex items-center gap-6 text-sm font-medium text-brand-mutedText">
+                <a href="#Section_HowItWorks" class="hover:text-brand-primaryText transition-colors">فرآیند کار</a>
+                <a href="#Section_SocialProof" class="hover:text-brand-primaryText transition-colors">آمار و رضایت</a>
+                <a href="#Section_Footer" class="hover:text-brand-primaryText transition-colors">تماس با ما</a>
+            </nav>
+
+            <div id="Header_CTA_Container">
+                <a href="#Section_Hero" id="Header_Nav_CTA" class="inline-flex items-center justify-center px-4 py-2 rounded-lg border border-brand-neon text-brand-neon font-bold text-sm hover:bg-brand-neon/10 transition-colors">
+                    رزرو میز تست
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION WITH GENERATED MOCKUP IMAGE -->
+    <section id="Section_Hero" class="py-12 md:py-20 border-b border-brand-border relative overflow-hidden">
+        <div class="max-w-[1200px] mx-auto px-4 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            
+            <!-- Right Side Content -->
+            <div class="lg:col-span-7 flex flex-col items-start gap-4">
+                <div id="Hero_Badge" class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-surface border border-brand-border font-mono text-xs text-brand-neon">
+                    <span class="w-2 h-2 rounded-full bg-brand-neon animate-pulse"></span>
+                    فقط برای توسعه‌دهندگان و تیم‌های فنی
+                </div>
+
+                <h1 id="Hero_Title" class="text-3xl sm:text-4xl lg:text-5xl font-black leading-tight text-brand-primaryText">
+                    جایی که قهوه‌تان دَم می‌کشد و کدهایتان کامپایل می‌شود.
+                </h1>
+
+                <p id="Hero_Subtitle" class="text-base sm:text-lg text-brand-mutedText leading-relaxed max-w-[600px]">
+                    فضای کار اشتراکی تخصصی برای برنامه‌نویسان؛ تلفیق سکوت عمیق کاری، اینترنت فیبر نوری پایداری ۱ گیگابیت و قهوه تخصصی دمی نامحدود.
+                </p>
+
+                <div id="Hero_CTA_Group" class="flex flex-wrap items-center gap-4 pt-2">
+                    <a href="#Section_Footer" id="Header_Hero_Button" class="neon-btn px-6 py-3 rounded-lg text-base">
+                        رزرو میز برای فردا
+                    </a>
+                    <a href="#Section_HowItWorks" id="Hero_Secondary_Button" class="px-6 py-3 rounded-lg bg-brand-surface border border-brand-border text-brand-primaryText font-medium text-base hover:bg-brand-surfaceElevated transition-colors">
+                        مشاهده فرآیند استقرار
+                    </a>
+                </div>
+            </div>
+
+            <!-- Left Side Visual (Embedded Image Render) -->
+            <div class="lg:col-span-5 w-full">
+                <div id="Hero_Image_Container" class="relative group rounded-2xl overflow-hidden border border-brand-border p-2 bg-brand-surface shadow-2xl">
+                    <img src="hero-mockup.png" alt="کافه‌کُد - فضای کار اشتراکی برنامه‌نویسان" class="w-full h-auto rounded-xl object-cover hover:scale-[1.02] transition-transform duration-300">
+                    <div class="absolute bottom-4 right-4 left-4 p-3 rounded-lg glass-card text-xs flex justify-between items-center dir-rtl">
+                        <span class="text-brand-neon font-mono font-bold">● محیط کاری فعال</span>
+                        <span class="text-brand-mutedText font-mono">1Gbps Dedicated Fiber</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS SECTION -->
+    <section id="Section_HowItWorks" class="py-12 md:py-20 border-b border-brand-border bg-brand-surface/30">
+        <div class="max-w-[1200px] mx-auto px-4">
+            <div class="text-center max-w-[700px] mx-auto mb-12">
+                <h2 class="text-2xl sm:text-3xl font-bold text-brand-primaryText mb-3">فرآیند ساده استقرار در کافه‌کُد</h2>
+                <p class="text-brand-mutedText text-sm sm:text-base">سه گام سریع تا شروع کدنویسی بدون حواس‌پرتی و در اوج بهره‌وری</p>
+            </div>
+
+            <div id="Section_HowItWorks_Cards" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div id="HowItWorks_Card_1" class="bg-brand-surface border border-brand-border rounded-xl p-6 flex flex-col items-start gap-3 hover:border-brand-neon/50 transition-colors">
+                    <div class="w-12 h-12 rounded-lg bg-brand-surfaceElevated border border-brand-border flex items-center justify-center text-brand-neon font-mono font-bold text-lg">01</div>
+                    <h3 class="text-lg font-bold text-brand-primaryText mt-2">۱. رزرو آنلاین</h3>
+                    <p class="text-sm text-brand-mutedText leading-relaxed">میز اختصاصی یا اشتراکی خود را در چند ثانیه رزرو کنید و صندلی خود را قبل از حرکت مشخص نمایید.</p>
+                </div>
+                <div id="HowItWorks_Card_2" class="bg-brand-surface border border-brand-border rounded-xl p-6 flex flex-col items-start gap-3 hover:border-brand-neon/50 transition-colors">
+                    <div class="w-12 h-12 rounded-lg bg-brand-surfaceElevated border border-brand-border flex items-center justify-center text-brand-neon font-mono font-bold text-lg">02</div>
+                    <h3 class="text-lg font-bold text-brand-primaryText mt-2">۲. استقرار و تمرکز</h3>
+                    <p class="text-sm text-brand-mutedText leading-relaxed">با فیبر نوری ۱ گیگابیت، سیستم برق اضطراری بدون قطعی و قهوه تخصصی دمی نامحدود مستقر شوید.</p>
+                </div>
+                <div id="HowItWorks_Card_3" class="bg-brand-surface border border-brand-border rounded-xl p-6 flex flex-col items-start gap-3 hover:border-brand-neon/50 transition-colors">
+                    <div class="w-12 h-12 rounded-lg bg-brand-surfaceElevated border border-brand-border flex items-center justify-center text-brand-neon font-mono font-bold text-lg">03</div>
+                    <h3 class="text-lg font-bold text-brand-primaryText mt-2">۳. هم‌افزایی و نتورکینگ</h3>
+                    <p class="text-sm text-brand-mutedText leading-relaxed">در کنار صدها برنامه‌نویس و تیم فنی دیگر شبکه بسازید، چالش‌های کدی را حل کرده و هم‌بنیان‌گذار پیدا کنید.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOCIAL PROOF & NUMBERS SECTION -->
+    <section id="Section_SocialProof" class="py-12 md:py-20 border-b border-brand-border">
+        <div class="max-w-[1200px] mx-auto px-4">
+            <div id="Section_SocialProof_Stats" class="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-12 border border-brand-border bg-brand-surface rounded-xl p-6 text-center">
+                <div class="p-2 border-l border-brand-border last:border-l-0">
+                    <div class="font-mono text-2xl sm:text-4xl font-black text-brand-neon">+۵۰۰</div>
+                    <div class="text-xs sm:text-sm text-brand-mutedText mt-2">توسعه‌دهنده و تیم فعال</div>
+                </div>
+                <div class="p-2 border-l border-brand-border last:border-l-0">
+                    <div class="font-mono text-2xl sm:text-4xl font-black text-brand-neon">+۲,۰۰۰</div>
+                    <div class="text-xs sm:text-sm text-brand-mutedText mt-2">فنجان قهوه دمی/ماه</div>
+                </div>
+                <div class="p-2 border-l border-brand-border last:border-l-0">
+                    <div class="font-mono text-2xl sm:text-4xl font-black text-brand-neon">+۱۰۰</div>
+                    <div class="text-xs sm:text-sm text-brand-mutedText mt-2">پروژه متولد شده</div>
+                </div>
+                <div class="p-2">
+                    <div class="font-mono text-2xl sm:text-4xl font-black text-brand-neon">۹۹.۹٪</div>
+                    <div class="text-xs sm:text-sm text-brand-mutedText mt-2">پایداری شبکه و برق</div>
+                </div>
+            </div>
+
+            <div id="Section_SocialProof_Testimonial" class="max-w-[750px] mx-auto bg-brand-surface border border-brand-border rounded-xl p-6 flex flex-col sm:flex-row items-center gap-6">
+                <div class="w-16 h-16 rounded-full bg-brand-surfaceElevated border-2 border-brand-neon flex items-center justify-center font-mono font-bold text-brand-neon text-lg shrink-0">SA</div>
+                <div class="text-center sm:text-right">
+                    <p class="text-sm sm:text-base text-brand-primaryText leading-relaxed italic">
+                        «سکوت و اتمسفر فنی کافه‌کُد سرعت توسعه محصولات ما رو دوبل کرد. بدون دغدغه قطعی اینترنت و با بهترین قهوه‌ها، با خیال راحت کد می‌زنیم.»
+                    </p>
+                    <div class="mt-3 text-xs font-bold text-brand-neon font-mono">
+                        سمیرا علی‌نژاد — Senior Product & SEO Specialist
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER SECTION -->
+    <footer id="Section_Footer" class="bg-brand-surface border-t border-brand-border pt-12 pb-8">
+        <div class="max-w-[1200px] mx-auto px-4">
+            <div id="Section_Footer_Links" class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-10 border-b border-brand-border">
+                <div class="flex flex-col gap-3">
+                    <div class="flex items-center gap-2 text-xl font-black text-brand-primaryText">
+                        <span class="font-mono text-brand-neon text-2xl">&gt;_</span>
+                        <span>کافه‌کُد</span>
+                    </div>
+                    <p class="text-xs text-brand-mutedText leading-relaxed">اولین فضای کار اشتراکی تخصصی توسعه‌دهندگان نرم‌افزار، مهندسان داده و تیم‌های فناوری در ایران.</p>
+                </div>
+
+                <div class="flex flex-col gap-3 text-xs">
+                    <span class="font-bold text-brand-primaryText text-sm mb-1">دسترسی سریع</span>
+                    <a href="#Section_Hero" class="text-brand-mutedText hover:text-brand-neon transition-colors">خانه</a>
+                    <a href="#Section_HowItWorks" class="text-brand-mutedText hover:text-brand-neon transition-colors">فرآیند کار</a>
+                    <a href="#Section_SocialProof" class="text-brand-mutedText hover:text-brand-neon transition-colors">آمار و نظرات</a>
+                </div>
+
+                <div class="flex flex-col gap-3 text-xs text-brand-mutedText">
+                    <span class="font-bold text-brand-primaryText text-sm mb-1">ارتباط با ما</span>
+                    <p class="font-mono">موبایل / پشتیبانی: <span class="text-brand-primaryText dir-ltr inline-block">09330724243</span></p>
+                    <p>ایمیل: astoriax.co@gmail.com</p>
+                    <div class="space-y-1 pt-1">
+                        <p><strong class="text-brand-primaryText">شعبه ۱ (تهران):</strong> خیابان آزادی، تقاطع حبیب‌اللهی (نمونه)</p>
+                        <p><strong class="text-brand-primaryText">شعبه ۲ (تبریز):</strong> خیابان امام، محدوده آبرسان (نمونه)</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col gap-3 text-xs">
+                    <span class="font-bold text-brand-primaryText text-sm mb-1">شبکه‌های اجتماعی</span>
+                    <div class="flex gap-4 text-brand-mutedText font-mono">
+                        <a href="mailto:astoriax.co@gmail.com" class="hover:text-brand-neon transition-colors">Email</a>
+                        <a href="https://github.com" target="_blank" class="hover:text-brand-neon transition-colors">GitHub</a>
+                        <a href="https://linkedin.com" target="_blank" class="hover:text-brand-neon transition-colors">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-[11px] text-brand-mutedText gap-3">
+                <p>© ۲۰۲۶ توسعه و بهینه‌سازی توسط <strong>سمیرا علی‌نژاد</strong> | تمامی حقوق محفوظ است.</p>
+                <p class="font-mono">Standard Compliant: <span class="text-brand-neon">Webnjoy UI/UX PDF Guidelines</span></p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
